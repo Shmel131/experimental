@@ -1,88 +1,26 @@
-# Git & DevOps Essentials
+# Data Science DevOps Toolkit (mini-app)
 
-Мини-проект, который объясняет ключевые вещи, без которых сложно строить и разворачивать современные проекты, особенно в Data Science и ML.
+This branch (feature/devops-ds) contains a lightweight interactive mini-application that presents a compact, 2026-relevant set of:
 
-## Что в проекте
+- Data types important for Data Scientists
+- API styles and common frameworks
+- DevOps / infra tools commonly used in ML/DS stacks
 
-- Git и GitHub: зачем нужен контроль версий
-- .gitignore: какие файлы не надо коммитить
-- package.json: зависимости и scripts проекта
-- API: как приложения обмениваются данными
-- Webhook: как сервисы сообщают друг другу о событиях
-- Docker: контейнеризация и переносимость
-- CI/CD: автоматизация сборки, тестов и деплоя
-- короткий тест для самопроверки
+How to preview
 
-## Как запустить локально
+1. Open index.html in a browser (static preview). No build required for the demo.
+2. Or serve locally: python -m http.server 8000 (from repo root) and open http://localhost:8000
 
-### Вариант 1: просто открыть HTML файл
+What was added
 
-1. Скачай или клонируй репозиторий.
-2. Открой файл `index.html` в браузере.
-3. Если захотите посмотреть через локальный сервер — можно запустить один из вариантов ниже.
+- index.html — UI scaffold
+- src/toolkit.js — compact dataset with cards (dataTypes, apis, devops)
+- src/app.js — minimal renderer + search + filters
+- src/styles.css — minimal styles
 
-### Вариант 2: через Python HTTP сервер
+Next suggested steps
 
-```bash
-cd experimental
-python3 -m http.server 8000
-```
+- If you want, I can open a PR from feature/devops-ds into your default branch.
+- Expand cards with examples (snippets, OpenAPI YAML) or add demos/fastapi_example.py if you want runnable examples.
 
-После этого открой в браузере:
-
-```text
-http://localhost:8000
-```
-
-### Вариант 3: через Node.js
-
-Если у тебя установлен Node.js, можно запустить:
-
-```bash
-cd experimental
-npx serve .
-```
-
-Или любой другой локальный сервер.
-
-## Структура проекта
-
-```text
-experimental/
-├── .gitignore
-├── index.html
-├── styles.css
-├── script.js
-├── README.md
-└── LICENSE (необязательно, можно добавить позже)
-```
-
-## Почему это важно для Data Science
-
-Даже если ты работаешь в notebooks и ML моделях, рано или поздно нужны:
-
-- Git для истории изменений и командной работы
-- API для модели как сервиса
-- Docker для воспроизводимости окружения
-- CI/CD для автоматической проверки и деплоя
-- package.json / requirements.txt для управления зависимостями
-- .gitignore для исключения мусора и секретов
-
-## Полезные ссылки
-
-- https://git-scm.com/
-- https://docs.github.com/ru
-- https://www.docker.com/
-- https://restfulapi.net/
-- https://www.atlassian.com/continuous-delivery
-
-## Важно
-
-Это мини-учебный проект. Он создан, чтобы объяснить базовые концепции простым языком и показать, как они связаны в реальном мире разработки.
-
-Если хочешь, следующим шагом можно сделать:
-
-- версию на React или Next.js,
-- интерактивные карточки с анимацией,
-- блок с “git flow” и схемами,
-- мини-quiz с более сложными вопросами.
+If you want a PR — tell me and I will open one with a description and checklist.
