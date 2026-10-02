@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git & DevOps для Data Science</title>
+    <meta
+      name="description"
+      content="Интерактивное мини-приложение о Git, API, CI/CD, Docker, .gitignore и package.json для Data Science"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap">
+          <div class="brand-mark">DS</div>
+          <div>
+            <p class="eyebrow">Data Science</p>
+            <h1>Git & DevOps Essentials</h1>
+          </div>
+        </div>
+        <a class="ghost-button" href="#topics">Смотреть темы</a>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="label">Почему это важно</p>
+            <h2>Умение понимать разработку — это навык, который помогает и в ML, и в реальном продукте.</h2>
+            <p>
+              Даже если ты делаешь Data Science, тебе рано или поздно встретятся Git,
+              репозитории, API для моделей, Docker, CI/CD и автоматизация. Эти вещи
+              помогают делать проекты воспроизводимыми, масштабируемыми и готовыми к реальному
+              использованию.
+            </p>
+            <div class="hero-actions">
+              <button class="primary-button" data-topic="git">Начать с Git</button>
+              <button class="secondary-button" data-topic="api">Что такое API</button>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="mini-graph">
+              <span class="dot dot-a"></span>
+              <span class="dot dot-b"></span>
+              <span class="dot dot-c"></span>
+              <span class="line line-a"></span>
+              <span class="line line-b"></span>
+            </div>
+            <ul>
+              <li><strong>Git</strong> — история изменений и командная работа</li>
+              <li><strong>API</strong> — способ общаться с сервисом</li>
+              <li><strong>Docker</strong> — одинаковый запуск везде</li>
+              <li><strong>CI/CD</strong> — автоматизация и деплой</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="topics" class="topics-section">
+          <div class="section-heading">
+            <p class="label">Основные темы</p>
+            <h3>Что важно знать</h3>
+          </div>
+
+          <div class="topic-grid" id="topic-grid"></div>
+        </section>
+
+        <section class="detail-panel" id="detail-panel">
+          <div class="detail-header">
+            <p class="label">Текущая лекция</p>
+            <h3 id="detail-title">Git</h3>
+          </div>
+          <div class="detail-content">
+            <div class="detail-block">
+              <h4>Что это?</h4>
+              <p id="detail-what"></p>
+            </div>
+            <div class="detail-block">
+              <h4>Почему это важно?</h4>
+              <p id="detail-why"></p>
+            </div>
+            <div class="detail-block code-block">
+              <h4>Пример</h4>
+              <pre id="detail-example"></pre>
+            </div>
+          </div>
+        </section>
+
+        <section class="comparison-panel">
+          <div class="section-heading">
+            <p class="label">Сравнение</p>
+            <h3>Когда что использовать</h3>
+          </div>
+
+          <div class="compare-grid">
+            <article>
+              <h4>Git vs GitHub</h4>
+              <p>
+                <strong>Git</strong> — это инструмент локально. <strong>GitHub</strong> —
+                сервис для хранения, совместной работы и review pull request.
+              </p>
+            </article>
+            <article>
+              <h4>API vs Webhook</h4>
+              <p>
+                <strong>API</strong> — вы сами делаете запрос. <strong>Webhook</strong> —
+                сервис сам приходит к вам и сообщает о событии.
+              </p>
+            </article>
+            <article>
+              <h4>Docker vs обычный запуск</h4>
+              <p>
+                Docker даёт одинаковую среду. Это важно, когда “у меня работает, а у вас нет”.
+              </p>
+            </article>
+            <article>
+              <h4>CI/CD vs ручной деплой</h4>
+              <p>
+                Автоматизация уменьшает ошибки, ускоряет релизы и делает процесс стабильнее.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="quiz-panel">
+          <div class="section-heading">
+            <p class="label">Проверка</p>
+            <h3>Небольшой тест</h3>
+          </div>
+
+          <div class="quiz-card">
+            <p class="quiz-question">Если ты запустил проект локально, но на другом компьютере он падает с ошибкой “не найден модуль”, что обычно помогает?</p>
+            <div class="quiz-options">
+              <button class="quiz-option" data-correct="true">Зафиксировать зависимости и среду (например, через package.json, requirements.txt, Docker)</button>
+              <button class="quiz-option">Сделать копию проекта без Git</button>
+              <button class="quiz-option">Только поменять название папки</button>
+            </div>
+            <p class="quiz-feedback" id="quiz-feedback"></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

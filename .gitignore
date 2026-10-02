@@ -1,0 +1,25 @@
+# Files to ignore in Git
+.DS_Store
+.vscode/
+.idea/
+*.log
+*.tmp
+.env
+.env.*
+__pycache__/
+*.pyc
+venv/
+.venv/
+node_modules/
+dist/
+build/
+coverage/
+.mypy_cache/
+.pytest_cache/
+*.sqlite3
+*.db
+models/checkpoints/
+artifacts/
+
+# OS files
+Thumbs.db
